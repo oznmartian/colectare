@@ -1,0 +1,67 @@
+/*
+=== Plugin Name: colectare
+frontend CSS - main CSS for the plugin.
+*/
+
+
+body {
+  --wp--style--global--content-size: 1500;
+  color: rgb(233, 233, 241) !important;
+  font-family: 'Lora';
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url("../img/harvest.jpg");
+  background: linear-gradient(rgba(47, 23, 15, 0.65)), url("../img/harvest.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: cursive !important;
+ text-align: center !important;
+ 
+}
+
+p {
+  line-height: 1.75;
+}
+
+.selectori {
+  grid-column: span 2;
+  margin-top: 10px;
+}
+.selectori-final {
+  width: 700px;
+  background-color: #C3E6CB;
+  color: black;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 200px 400px;
+  grid-template-rows: 200px;
+
+}
+
+input {
+  width: 100px;
+  gap: 3rem;
+}
+
+.container {
+  width: 700px;
+  justify-content: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 350px 500px;
+  grid-template-rows: 150px 500px;
+}
+.final-view {
+
+  display: grid;
+
+  grid-template-rows: 150px 500px;
+
+}
+
