@@ -100,13 +100,13 @@ class FormsPageView
 
 						 	Brand:<select id="SelectByBrand" onchange="SelectByBrand()">
 								<option value="">ALL</option>';
-			foreach ($unique_array_brand as $value) {
-				$brand = $value;
-				$output .= <<<DOC
+								foreach ($unique_array_brand as $value) {
+									$brand = $value;
+									$output .= <<<DOC
 													<option value= $brand > $brand</option>
 													DOC;
-			}
-			$output .= '	</select>
+									}
+				$output .= '</select>
 
 							<br><br>
 							Categorie:<select id="SelectByCategory" onchange="SelectByCategory()">
@@ -260,26 +260,24 @@ class GeneralTableView
 						<br><br>
 							User:<select id="User" onchange="selectUser();">
 								<option value="">ALL</option>';
-			foreach ($unique_array_user as $value) {
-				$user = $value;
-				$output .= <<<DOC
-														<option value= $user > $user</option>
-														DOC;
-			}
+								foreach ($unique_array_user as $value) {
+									$user = $value;
+									$output .= <<<DOC
+												<option value= $user > $user</option>
+												DOC;
+								}
 
 			$output .= '</select>
 							<br><br>
                                 Brand:<select id="Brand" onchange="selectBrand();">
                             <option value="">ALL</option>';
-			foreach ($unique_array_brand as $value) {
-				$brand = $value;
-				$output .= <<<DOC
+							foreach ($unique_array_brand as $value) {
+								$brand = $value;
+								$output .= <<<DOC
 													<option value= $brand > $brand</option>
 													DOC;
-			}
-			;
-
-
+							}
+			
 			$output .= '</select>
 					</div> ';
 
@@ -299,17 +297,13 @@ class GeneralTableView
                            
 							Categorie:<select id="Categorie" onchange="selectCategorie();">
 								<option value="">ALL</option>';
-			foreach ($unique_array_categorie as $value) {
-				$category = $value;
-				$output .= <<<DOC
-														<option value= $category > $category</option>
-														DOC;
-			}
-			;
-
-
-
-
+								foreach ($unique_array_categorie as $value) {
+									$category = $value;
+									$output .= <<<DOC
+								<option value= $category > $category</option>
+								DOC;
+								}
+			
 			$output .= '</select>  </div> </div>';
 			//Tabel final view
 			$output .= '<div class = "final-view" style="overflow-y:auto;">';
@@ -389,8 +383,6 @@ class ReportView
 			global $head;
 			$output = $head;
 
-
-
 			$user_array = array();
 			foreach ($users as $value) {
 				$user_array[] = $value['user'];
@@ -415,19 +407,19 @@ class ReportView
 									<option value="All">ALL</option>	 
 							DOC;
 
-			foreach ($unique_array_user as $value) {
-				$output .= <<<DOC
-								<option value = $value  
-								DOC;
-				if (isset($_POST['user']) && ($_POST['user'] === $value)) {
+							foreach ($unique_array_user as $value) {
+								$output .= <<<DOC
+												<option value = $value  
+												DOC;
+								if (isset($_POST['user']) && ($_POST['user'] === $value)) {
 
-					$output .= "selected";
-				}
+									$output .= "selected";
+								}
 
-				$output .= ">$value</option>";
+								$output .= ">$value</option>";
 
-				$output .= ">$value</option>";
-			}
+								$output .= ">$value</option>";
+							}
 			$output .= '</select>';
 
 			$store = $_SESSION['store_name_string'];
@@ -457,8 +449,6 @@ class ReportView
 										</tr>
 									</thead>
 						DOC;
-
-
 
 			if (!empty($report)) {
 				foreach ($report as $row) {

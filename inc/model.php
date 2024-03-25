@@ -25,9 +25,7 @@ class UserAndStoreSelection
 			$table = $this->db_conn->prefix . 'date_magazine';
 
 			$query =  $this->db_conn->prepare("SELECT * FROM $table WHERE status = %s AND user = %s ", 'activ', $user_login);
-			//$query ="SELECT * FROM $table WHERE statuts = 'activ' AND user = '".$user_login."' ";
-			//var_dump($query);
-
+		
 			//$this->db_conn->show_errors();
 			$result = $this->db_conn->get_results($query, ARRAY_A);
 			//$this->db_conn->print_error();
@@ -47,16 +45,12 @@ class GetFormsModel
 
 	public function __construct($db, $store_id)
 	{
-
-
 		$this->db_conn = $db;
 		$this->id_magazin = $store_id;
 	}
 
 	public function get_store_name()
 	{
-
-
 		$f_store_id = $this->id_magazin;
 
 		$table = $this->db_conn->prefix . 'date_magazine';
@@ -96,10 +90,6 @@ class SaveDataModel
 {
 	public static function save_data($input, $db_conn)
 	{
-		//var_dump($input);
-
-
-
 		if (
 			isset($input['id_abg']) && isset($input['qty_abg']) &&
 			isset($input['user_id']) && isset($input['store_id']) &&
@@ -141,7 +131,7 @@ class SaveDataModel
 
 							'%d', '%d', '%d', '%d', '%s'
 						);
-						//var_dump($param);
+						
 						$db_conn->query('START TRANSACTION');
 						$db_conn->insert($table, $param, $sanitize);
 						$db_conn->query('COMMIT');
@@ -276,8 +266,6 @@ class ReportModel
 
 	private $input;
 	private $db_conn;
-
-
 	public function __construct($a, $b)
 	{
 
@@ -289,7 +277,7 @@ class ReportModel
 	{
 
 		$query_str = "SELECT user FROM wp_date_magazine";
-		//var_dump($query_str);
+	
 		//$this->db_conn->show_errors();
 		$users = $db_con->get_results($query_str, ARRAY_A);
 		//$this->db_conn->print_error();
@@ -344,8 +332,6 @@ class ReportModel
 				array($dateStart, $dateEnd, $store, $network, $dateStart, $dateEnd, $store, $network)
 			);
 
-
-			//var_dump($query_str);
 			//$this->db_conn->show_errors();
 			$report = $this->db_conn->get_results($query_str, ARRAY_A);
 			//$this->db_conn->print_error();
