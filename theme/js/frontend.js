@@ -1,6 +1,6 @@
 function SelectByCod() {
   // cautare cod in formular ABG
-  var input, filter, table, tr, td, tdInput, td1, td1, i, txtValue;
+  var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("SelectByCod");
   filter = input.value.toUpperCase();
   table = document.getElementById("TableABG");
@@ -17,12 +17,15 @@ function SelectByCod() {
       }
     }
   }
+
 }
+
+
 
 function SelectByCategory() {
   //selectare categorie in Formular ABG
 
-  var input, filter, table, tr, td, i, txtValue, tdInput;
+  var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("SelectByCategory");
   filter = input.value.toUpperCase();
   table = document.getElementById("TableABG");
@@ -65,7 +68,7 @@ function SelectByBrand() {
 
 function selectBrand() {
 
-  var input, filter, table, tr, td, i, txtValue, tdInput;
+  var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("Brand");
   filter = input.value.toUpperCase();
   table = document.getElementById("finalTable");
@@ -87,7 +90,7 @@ function selectBrand() {
 
 function selectCategorie() {
   
-  var input, filter, table, tr, td, i, txtValue, tdInput;
+  var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("Categorie");
   filter = input.value.toUpperCase();
   table = document.getElementById("finalTable");
@@ -109,7 +112,7 @@ function selectCategorie() {
 
 function selectUser() {
   
-  var input, filter, table, tr, td, i, txtValue, tdInput;
+  var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("User");
   filter = input.value.toUpperCase();
   table = document.getElementById("finalTable");
@@ -131,7 +134,7 @@ function selectUser() {
 
 function selectMagazin() {
   
-  var input, filter, table, tr, td, tdInput, td1, td1, i, txtValue;
+  var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("selectMagazin");
   filter = input.value.toUpperCase();
   table = document.getElementById("finalTable");
@@ -152,9 +155,6 @@ function selectMagazin() {
     }
   }
 }
-
-
-
 
 if (window.history.replaceState) {
   window.history.replaceState(null, null, window.location.href);
