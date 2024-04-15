@@ -2,11 +2,11 @@
 
 /**
  *   Plugin Name: Colectare 
- *   Plugin URI: http://comanda.byethost24.com/
+ *   Plugin URI: http://localhost/wordpress/
  *   Description: Un plugin care va activa un shortcode pentru colectare date 
  *   Version: 1.0
  *   Author: Nicolae
- *   Author URI: http://comanda.byethost24.com/
+ *   Author URI: http://localhost/wordpress/
  *  
  */
 
